@@ -9,7 +9,7 @@ class ShowHide extends Component {
     lastCard: false,
   }
 
-  firstName = () => {
+  firstCard = () => {
     const {firstCard} = this.state
     this.setState(() => ({firstCard: !firstCard}))
   }
@@ -27,16 +27,16 @@ class ShowHide extends Component {
         <h1>Show/Hide</h1>
         <div className="card-container">
           <div className="button-container">
-            <button type="button" className="button" onClick={this.firstName}>
+            <button type="button" className="button" onClick={this.firstCard}>
               Show/Hide Firstname
             </button>
-            {firstCard ? <p className="para-text">Joe</p> : ''}
+            {this.firstCard ? <p className="para-text">Joe</p> : ''}
           </div>
           <div className="button-container">
-            <button type="button" className="button" onClick={this.lastName}>
+            <button type="button" className="button" onClick={this.lastCard}>
               Show/Hide Lastname
             </button>
-            {lastCard ? <p className="para-text">Jonas</p> : ''}
+            {this.lastCard ? <p className="para-text">Jonas</p> : ''}
           </div>
         </div>
       </div>
